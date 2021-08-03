@@ -8,7 +8,7 @@ image:
   repository: harbor.example.com/library/samples/spring-petclinic-demo
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: v1.0.15
+  tag: v1.0.16
 
 imagePullSecrets: []
 nameOverride: "spring-petclinic"
