@@ -11,5 +11,11 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+  ports:
+    - name: http
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+      nodePort: {{ .Values.service.nodePort }}
+      protocol: TCP      
   selector:
     {{- include "spring-petclinic.selectorLabels" . | nindent 4 }}

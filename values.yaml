@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: susesamples/spring-petclinic-demo
+  repository: harbor.example.com/spring-petclinic-demo
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: v1.0.42
@@ -37,8 +37,10 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 8080
+  targetPort: 8080
+  nodePort: 30800
 
 ingress:
   enabled: false
